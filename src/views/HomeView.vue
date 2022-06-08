@@ -16,14 +16,15 @@
 
     <div class="edit">
       <h4>Edit counter title:</h4>
-      <input v-model="counterData.title" type="text">
+      <input v-model="counterData.title" type="text" v-autofocus>
     </div>
 
   </div>
 </template>
 
 <script setup>
-import { reactive, ref, computed, watch } from 'vue';
+import { reactive, computed, watch } from 'vue';
+import { vAutofocus } from '@/directives/vAutofocus.js'
 
 const appTitle = 'My Amazing Counter App'
 
