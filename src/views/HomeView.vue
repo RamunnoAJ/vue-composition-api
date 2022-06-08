@@ -19,12 +19,13 @@
 </template>
 
 <script setup>
-import { reactive, ref } from 'vue';
+import { onMounted, reactive } from 'vue';
 
 const appTitle = 'My Amazing Counter App'
 
-// const counter = ref(0),
-//   counterTitle = ref('My Counter')
+onMounted(() => {
+  console.log('do stuff related to App title')
+})
 
 const counterData = reactive({
   count: 0,
@@ -38,6 +39,42 @@ const increaseCounter = () => {
 const decreaseCounter = () => {
   counterData.count--
 }
+
+onMounted(() => {
+  console.log('do stuff related to Counter')
+})
+
+// onBeforeMount(() => {
+//   console.log('onBeforeMount')
+// })
+
+// onMounted(() => {
+//   console.log('onMounted')
+// })
+
+// onBeforeUnmount(() => {
+//   console.log('onBeforeUnmount')
+// })
+
+// onUnmounted(() => {
+//   console.log('onUnmounted')
+// })
+
+// onActivated(() => {
+//   console.log('onActivated')
+// })
+
+// onDeactivated(() => {
+//   console.log('onDeactivated')
+// })
+
+// onBeforeUpdate(() => {
+//   console.log('onBeforeUpdate')
+// })
+
+// onUpdated(() => {
+//   console.log('onUpdated')
+// })
 </script>
 
 
